@@ -75,7 +75,7 @@ h1, h3 {
       -ms-flex-align: center;
 					align-items: flex-start;
 	
-	/*border: 1px solid black;*/
+	border: 1px solid black;
 }
 
 .diceContainer {
@@ -88,17 +88,40 @@ h1, h3 {
           flex-direction: column;
   -webkit-box-align: center;
       -ms-flex-align: center;
-					align-items: center;
+					/*align-items: center;*/
 					justify-content: center;
-					/*border: 1px solid black;*/
+					border: 1px solid black;
+	width: 1600px;
+	height: 700px;
+	margin: 15px;
+  padding: 5px;
+	
 }
 
 
 
-#dice_player1_3 {
-	width: 100px;
+.dicePlayer13 {
+	width: 200px;
+	height: 200px;
+	position: relative;
+  animation-name: example;
+	animation-duration: 2s;
+}
+
+ 
+@keyframes example {
+  0%   {left:0px; top:0px;}
+  100%  {left:1400px; top:0px;}
+	from   {transform: rotateZ(0deg);}
+	to {transform: rotateZ(360deg);}
 
 }
+
+#scorePlayer1, #scorePlayer2 {
+	text-align: right;
+}
+
+
 
 @media only screen and (max-width: 768px) {
   .formAndDiceContainer {
