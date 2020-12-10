@@ -1,0 +1,45 @@
+#player01-gameContainer, #player02-gameContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding-bottom: 40px;
+}
+
+.boardStep {
+  width: 80px;
+  height: 80px;
+  border-top: 4px solid black;
+  border-left: 4px solid black;
+  border-bottom: 4px solid black;
+  text-align: center;
+}
+
+#player01-step15, #player02-step15 {
+  border-right: 4px solid black;
+}
+
+.playericon {
+  padding-top: 25px;
+  width: 25px;
+  display: none;
+}
+
+#player01-figure10 {
+  display: inline;
+}
+
+#player02-figure4 {
+  display: inline;
+}
+
+.playerHead {
+  font-family: Poppins;
+  padding-bottom: 20px;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 24px;
+}
+/*# sourceMappingURL=styles2.css.map */

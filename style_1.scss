@@ -18,16 +18,11 @@ html {
 
 body {
 	font-family: 'Rye', cursive;
-	
-}
-
-#root {
-  /*background-image: linear-gradient(45deg, #0b0c5a, hsla(219, 84%, 45%, 0.725));*/
-	height: 100vh;
-	background-image: url(/img/dice_background.jpg);
+	background-image: linear-gradient(0deg, rgba(63, 6, 116, 0.678), rgba(0, 238, 255, 0.486)), url(/img/dice_background.jpg);
 	background-position: center; /* Center the image */
   background-repeat: no-repeat; /* Do not repeat the image */
  	background-size: cover; /* Resize the background image to cover the entire container */
+	
 }
 
 h1, h3 {
@@ -43,8 +38,6 @@ h1, h3 {
           box-shadow: 3px 2px #3f3e3e;
   margin: 10px;
   padding: 5px;
-  height: 30px;
-  width: 200px;
   border-radius: 10px;
 }
 
@@ -74,9 +67,7 @@ h1, h3 {
   -webkit-box-align: center;
       -ms-flex-align: center;
 					align-items: flex-start;
-	
-	border: 1px solid black;
-}
+	}
 
 .diceContainer {
   display: -webkit-box;
@@ -90,31 +81,34 @@ h1, h3 {
       -ms-flex-align: center;
 					/*align-items: center;*/
 					justify-content: center;
-					border: 1px solid black;
 	width: 1600px;
-	height: 700px;
+	height: 400px;
 	margin: 15px;
   padding: 5px;
 	
 }
 
-
-
 .dicePlayer13 {
-	width: 200px;
-	height: 200px;
+	width: 80px;
+	height: 80px;
 	position: relative;
-  /*animation-name: example;
-	animation-duration: 2s;*/
 }
 
- /*
+.dicePlayer013 {
+	width: 80px;
+	height: 80px;
+	position: relative;
+  animation-name: example;
+	animation-duration: 2s;
+}
+
+
 @keyframes example {
-  0%   {left:0px; top:0px;}
-  100%  {left:1400px; top:0px;}
+  /*0%   {left:0px; top:0px;}
+  100%  {left:300px; top:0px;}*/
 	from   {transform: rotateZ(0deg);}
 	to {transform: rotateZ(360deg);}
-} */
+}
 
 #scorePlayer1, #scorePlayer2 {
 	text-align: right;
@@ -142,7 +136,7 @@ h1, h3 {
 
 @media only screen and (min-width: 1440px) {
   body {
-    font-size: 350%;
+    font-size: 100%;
   }
   #nameInputPlayer1, #buttonPlayer1, #nameInputPlayer2, #buttonPlayer2 {
     font-size: 110%;
@@ -150,9 +144,50 @@ h1, h3 {
             box-shadow: 3px 5px darkgrey;
     margin: 10px;
     padding: 5px;
-    height: 100px;
-    width: 500px;
+    height: 50px;
+    width: 150px;
   }
+}
+
+#player01-gameContainer, #player02-gameContainer{
+	display: flex;
+	justify-content: center;
+	padding-bottom: 40px;
+}
+
+.boardStep{
+	width: 80px;
+	height: 80px;
+	border-top: 4px solid white;
+	border-left: 4px solid white;
+	border-bottom: 4px solid white;
+	text-align: center;
+}
+
+#player01-step15, #player02-step15{
+	border-right: 4px solid white;
+}
+
+.playericon{
+	padding-top: 25px;
+	width: 25px;
+}
+
+#player01-figure10{
+	display: inline;
+}
+
+#player02-figure4{
+	display: inline;
+}
+
+.playerHead{
+color: white;
+font-family: Poppins;
+padding-bottom: 20px;
+text-transform: uppercase;
+font-weight: 700;
+font-size: 24px;
 }
 
 /*
