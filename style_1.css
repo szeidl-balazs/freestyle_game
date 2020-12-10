@@ -102,50 +102,17 @@ h1, h3 {
   width: 200px;
   height: 200px;
   position: relative;
-  -webkit-animation-name: example;
-          animation-name: example;
-  -webkit-animation-duration: 2s;
-          animation-duration: 2s;
+  /*animation-name: example;
+	animation-duration: 2s;*/
 }
 
-@-webkit-keyframes example {
-  0% {
-    left: 0px;
-    top: 0px;
-  }
-  100% {
-    left: 1400px;
-    top: 0px;
-  }
-  from {
-    -webkit-transform: rotateZ(0deg);
-            transform: rotateZ(0deg);
-  }
-  to {
-    -webkit-transform: rotateZ(360deg);
-            transform: rotateZ(360deg);
-  }
-}
-
+/*
 @keyframes example {
-  0% {
-    left: 0px;
-    top: 0px;
-  }
-  100% {
-    left: 1400px;
-    top: 0px;
-  }
-  from {
-    -webkit-transform: rotateZ(0deg);
-            transform: rotateZ(0deg);
-  }
-  to {
-    -webkit-transform: rotateZ(360deg);
-            transform: rotateZ(360deg);
-  }
-}
-
+  0%   {left:0px; top:0px;}
+  100%  {left:1400px; top:0px;}
+	from   {transform: rotateZ(0deg);}
+	to {transform: rotateZ(360deg);}
+} */
 #scorePlayer1, #scorePlayer2 {
   text-align: right;
 }

@@ -104,18 +104,17 @@ h1, h3 {
 	width: 200px;
 	height: 200px;
 	position: relative;
-  animation-name: example;
-	animation-duration: 2s;
+  /*animation-name: example;
+	animation-duration: 2s;*/
 }
 
- 
+ /*
 @keyframes example {
   0%   {left:0px; top:0px;}
   100%  {left:1400px; top:0px;}
 	from   {transform: rotateZ(0deg);}
 	to {transform: rotateZ(360deg);}
-
-}
+} */
 
 #scorePlayer1, #scorePlayer2 {
 	text-align: right;

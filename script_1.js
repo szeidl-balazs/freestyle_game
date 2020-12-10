@@ -9,82 +9,99 @@ function pageLoaded() {
 	/*a formot és a dice-ot befoglaló konténer*/
 
 	rootDiv.insertAdjacentHTML('afterbegin', '<div class="formAndDiceContainer"></div>');
-	let formAndDiceContainer = document.querySelector(".formAndDiceContainer");
-	formAndDiceContainer.insertAdjacentHTML('beforebegin', '<h1>Roll the dice!</h1>');
+	let formAndDice = document.querySelector(".formAndDiceContainer");
+	formAndDice.insertAdjacentHTML('beforebegin', '<h1>Roll the dice!</h1>');
 
 
 	/*A formot befoglaló container létrehozása */	
-	formAndDiceContainer.insertAdjacentHTML('afterbegin', '<div class="formContainer"></div');
-		let formContainer = document.querySelector(".formContainer");
+	formAndDice.insertAdjacentHTML('afterbegin', '<div class="formContainer"></div');
+		let formCont = document.querySelector(".formContainer");
 	
 
 	/*A form létrehozása */
-		formContainer.insertAdjacentHTML('afterbegin', '<form class="form"></form>');
-		let form = document.querySelector(".form");
+		formCont.insertAdjacentHTML('afterbegin', '<form class="form"></form>');
+		let formItem = document.querySelector(".form");
 
 	/*Player1 input létrehozása attribútumokkal */
-		form.insertAdjacentHTML('beforebegin', '<h3 id="playerInput">Select player!</h3>');
-		form.insertAdjacentHTML('afterbegin', '<div class="formName1Container"></div>');	
-		let formName1Container = document.querySelector(".formName1Container");
+		formItem.insertAdjacentHTML('beforebegin', '<h3 id="playerInput">Select player!</h3>');
+		formItem.insertAdjacentHTML('afterbegin', '<div class="formName1Container"></div>');	
+		let formName1Cont = document.querySelector(".formName1Container");
 
-		formName1Container.insertAdjacentHTML('afterbegin', '<input id="nameInputPlayer1" autofocus></name>');
-		let nameInputPlayer1 = document.querySelector("#nameInputPlayer1");
-		nameInputPlayer1.setAttribute("id", "nameInputPlayer1");
-		nameInputPlayer1.setAttribute("type", "text");
-		nameInputPlayer1.setAttribute("placeholder", "Player1");
+		formName1Cont.insertAdjacentHTML('afterbegin', '<input id="nameInputPlayer1" autofocus></name>');
+		let nameInput1 = document.querySelector("#nameInputPlayer1");
+		nameInput1.setAttribute("id", "nameInputPlayer1");
+		nameInput1.setAttribute("type", "text");
+		nameInput1.setAttribute("placeholder", "Player1");
 		
 		/*player1 gomb létrehozása*/
-			form.insertAdjacentHTML('beforeend', '<div class="buttonPlayer1Container"></div>');
-			let buttonPlayer1Container = document.querySelector(".buttonPlayer1Container");
-			buttonPlayer1Container.insertAdjacentHTML('afterbegin', '<button id="buttonPlayer1">Roll the dice 1</>');
-			let buttonPlayer1 = document.querySelector("#buttonPlayer1");
+			formItem.insertAdjacentHTML('beforeend', '<div class="buttonPlayer1Container"></div>');
+			let buttonPlayer1Cont = document.querySelector(".buttonPlayer1Container");
+			buttonPlayer1Cont.insertAdjacentHTML('afterbegin', '<input value="Roll the dice1" id="buttonPlayer1" type="submit">');
+			let buttonPlayer01 = document.querySelector("#buttonPlayer1");
 			
 	
 	/*Player2 input létrehozása attribútumokkal */
-		form.insertAdjacentHTML('beforeend', '<div class="formName2Container"></div>');
-		let formName2Container = document.querySelector(".formName2Container");
+		formItem.insertAdjacentHTML('beforeend', '<div class="formName2Container"></div>');
+		let formName2Cont = document.querySelector(".formName2Container");
 	
-		formName2Container.insertAdjacentHTML('beforeend', '<input id="nameInputPlayer2" autofocus></name>');
-		let nameInputPlayer2 = document.querySelector("#nameInputPlayer2");
-		nameInputPlayer2.setAttribute("id", "nameInputPlayer2");
-		nameInputPlayer2.setAttribute("type", "text");
-		nameInputPlayer2.setAttribute("placeholder", "Player2");
+		formName2Cont.insertAdjacentHTML('beforeend', '<input id="nameInputPlayer2" autofocus></name>');
+		let nameInput2 = document.querySelector("#nameInputPlayer2");
+		nameInput2.setAttribute("id", "nameInputPlayer2");
+		nameInput2.setAttribute("type", "text");
+		nameInput2.setAttribute("placeholder", "Player2");
 
 
 	/*player2 gomb létrehozása*/
-		form.insertAdjacentHTML('beforeend', '<div class="buttonPlayer2Container"></div>');
-		let buttonPlayer2Container = document.querySelector(".buttonPlayer2Container");
-		buttonPlayer2Container.insertAdjacentHTML('afterbegin', '<button id="buttonPlayer2">Roll the dice 2</>');
-		let buttonPlayer2 = document.querySelector("#buttonPlayer2");
+		formItem.insertAdjacentHTML('beforeend', '<div class="buttonPlayer2Container"></div>');
+		let buttonPlayer2Cont = document.querySelector(".buttonPlayer2Container");
+		buttonPlayer2Cont.insertAdjacentHTML('afterbegin', '<button id="buttonPlayer2" type="button">Roll the dice 2</>');
+		let buttonPlayer02 = document.querySelector("#buttonPlayer2");
 
 	/*A character sheet-et befoglaló container létrehozása */	
-		formContainer.insertAdjacentHTML('afterend', '<div class="diceContainer"></div');
-		let diceContainer = document.querySelector(".diceContainer");
-		diceContainer.insertAdjacentHTML('afterbegin', '<img src="img/player2_dot3.png" class="dicePlayer13">');
-		let dicePlayer13 = document.querySelector(".dicePlayer13");
+		formCont.insertAdjacentHTML('afterend', '<div class="diceContainer"></div');
+		let diceCont = document.querySelector(".diceContainer");
+		diceCont.insertAdjacentHTML('afterbegin', '<img src="img/player2_dot3.png" class="dicePlayer13">');
+		let dicePlayer013 = document.querySelector(".dicePlayer13");
 	
-	/* dice mozgatás balról jobbra */
-		buttonPlayer1.addEventListener('click', function() {
-			dicePlayer13.classList.add("dicePlayer13");
-		});
+	/* dice mozgatás balról jobbra
+		buttonPlayer01.addEventListener('click', function() {
+			dicePlayer013.classList.add("dicePlayer13");
+		});*/
 
-		buttonPlayer2.addEventListener('click', function() {
-			dicePlayer13.classList.add("dicePlayer13");
-		});
+		/*buttonPlayer02.addEventListener('click', function() {
+			dicePlayer013.classList.add("dicePlayer13");
+		});*/
 
 		/*eredmény generátor létrehozása*/
 
-		diceContainer.insertAdjacentHTML('beforeend', '<p id="scorePlayer1"></p>');
-		let scorePlayer1 = document.querySelector("#scorePlayer1");
-		document.getElementById("scorePlayer1").innerHTML = Math.floor(Math.random() * 6) +1;
+		
+		
 
-		diceContainer.insertAdjacentHTML('beforeend', '<p id="scorePlayer2"></p>');
-		let scorePlayer2 = document.querySelector("#scorePlayer2");
-		document.getElementById("scorePlayer2").innerHTML = Math.floor(Math.random() * 6) +1;
+		 
+		function scoreDisplay01() {
+			/*dicePlayer013.classList.add("dicePlayer13");*/
+			let score1 = Math.floor(Math.random() * 6) +1;
+			diceCont.insertAdjacentHTML('beforeend', '<p id="scorePlayer1"></p>');
+			let scorePlayer01 = document.querySelector("#scorePlayer1");
+			scorePlayer01.innerHTML = score1;
+			
+		}
+
+		buttonPlayer01.addEventListener('click', scoreDisplay01);
+
+		function scoreDisplay02() {
+			/*dicePlayer013.classList.add("dicePlayer13");*/
+			let score2 = Math.floor(Math.random() * 6) +1;
+			diceCont.insertAdjacentHTML('beforeend', '<p id="scorePlayer2"></p>');
+			let scorePlayer02 = document.querySelector("#scorePlayer2");
+			scorePlayer02.innerHTML = score2;
+		}
+
+			buttonPlayer02.addEventListener('click', scoreDisplay02);
 
 
-	/*buttonPlayer1.addEventListener('click', function() {
-		let dice = document.querySelector("#dicePlayer13");
+	/*buttonPlayer01.addEventListener('click', function() {
+		let dice = document.querySelector("#dicePlayer013");
 			let position = 180;
 			let timing = setInterval(frame, 2);
 			function frame() {
