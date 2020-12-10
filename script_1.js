@@ -36,7 +36,7 @@ function pageLoaded() {
 		/*player1 gomb létrehozása*/
 			formItem.insertAdjacentHTML('beforeend', '<div class="buttonPlayer1Container"></div>');
 			let buttonPlayer1Cont = document.querySelector(".buttonPlayer1Container");
-			buttonPlayer1Cont.insertAdjacentHTML('afterbegin', '<input value="Roll the dice1" id="buttonPlayer1" type="submit">');
+			buttonPlayer1Cont.insertAdjacentHTML('afterbegin', '<button id="buttonPlayer1" type="button">Roll the dice1!</button>');
 			let buttonPlayer01 = document.querySelector("#buttonPlayer1");
 			
 	
@@ -54,7 +54,7 @@ function pageLoaded() {
 	/*player2 gomb létrehozása*/
 		formItem.insertAdjacentHTML('beforeend', '<div class="buttonPlayer2Container"></div>');
 		let buttonPlayer2Cont = document.querySelector(".buttonPlayer2Container");
-		buttonPlayer2Cont.insertAdjacentHTML('afterbegin', '<button id="buttonPlayer2" type="button">Roll the dice 2</>');
+		buttonPlayer2Cont.insertAdjacentHTML('afterbegin', '<button id="buttonPlayer2" type="button">Roll the dice2!</button>');
 		let buttonPlayer02 = document.querySelector("#buttonPlayer2");
 
 	/*A character sheet-et befoglaló container létrehozása */	
@@ -63,41 +63,50 @@ function pageLoaded() {
 		diceCont.insertAdjacentHTML('afterbegin', '<img src="img/player2_dot3.png" class="dicePlayer13">');
 		let dicePlayer013 = document.querySelector(".dicePlayer13");
 	
-	/* dice mozgatás balról jobbra
+		/*dice mozgatás balról jobbra*/
 		buttonPlayer01.addEventListener('click', function() {
 			dicePlayer013.classList.add("dicePlayer13");
-		});*/
+		});
 
-		/*buttonPlayer02.addEventListener('click', function() {
+		buttonPlayer02.addEventListener('click', function() {
 			dicePlayer013.classList.add("dicePlayer13");
-		});*/
+		});
 
-		/*eredmény generátor létrehozása*/
-
-		
+		/*eredmény generátor létrehozása*/	
 		
 
 		 
 		function scoreDisplay01() {
-			/*dicePlayer013.classList.add("dicePlayer13");*/
 			let score1 = Math.floor(Math.random() * 6) +1;
 			diceCont.insertAdjacentHTML('beforeend', '<p id="scorePlayer1"></p>');
 			let scorePlayer01 = document.querySelector("#scorePlayer1");
 			scorePlayer01.innerHTML = score1;
-			
+			return false;		
+
 		}
 
 		buttonPlayer01.addEventListener('click', scoreDisplay01);
 
 		function scoreDisplay02() {
-			/*dicePlayer013.classList.add("dicePlayer13");*/
 			let score2 = Math.floor(Math.random() * 6) +1;
 			diceCont.insertAdjacentHTML('beforeend', '<p id="scorePlayer2"></p>');
 			let scorePlayer02 = document.querySelector("#scorePlayer2");
 			scorePlayer02.innerHTML = score2;
+			return false;
 		}
 
 			buttonPlayer02.addEventListener('click', scoreDisplay02);
+
+
+			/* A scorePlayer1 és a scorePlayer2 id-jű p tagek értékét be kell menteni egy új változóba, ami array, és ezt kell kiíratni egy új p tagbe.*/
+
+			let sumScore01
+
+			for (index = 0; index < sumScore.length; index++) {
+				sumScore01 = document.querySelector("#scorePlayer1").value;
+				console.log(sumScore01)
+			}
+			
 
 
 	/*buttonPlayer01.addEventListener('click', function() {
@@ -149,6 +158,6 @@ function myStopFunction() {
 }*/
 		
 	
-};
+}
 
 window.addEventListener("load", pageLoaded);
