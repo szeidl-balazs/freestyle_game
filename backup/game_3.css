@@ -1,0 +1,61 @@
+.score-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 80px 400px;
+  padding: 50px;
+  border-radius: 10px;
+  background-color: #9f55e4;
+}
+
+.player-names {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0px 400px;
+  margin-bottom: -200px;
+  padding: 40px;
+}
+
+#score1, #score2, #to {
+  font-size: 40px;
+  font-style: bold;
+  display: inline-block;
+  background-color: black;
+  color: white;
+  padding: 40px;
+  border: 0px;
+  border-radius: 10px;
+}
+
+#to {
+  background-color: transparent;
+  color: black;
+}
+
+/* .reset-btn {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+} */
+/*# sourceMappingURL=game_3.css.map */

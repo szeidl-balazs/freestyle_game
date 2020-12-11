@@ -10,6 +10,8 @@
 }
 
 .player-names {
+  font-family: 'Rye', cursive;
+  font-size: 30px;;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
@@ -19,7 +21,7 @@
   padding: 40px;
 }
 
-#score1,#score2,#to {
+#scoreBoard1,#scoreBoard2,#to {
   font-size: 40px;
   font-style:bold;
   display: inline-block;
